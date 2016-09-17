@@ -1,0 +1,356 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+$positive:                        #6375fa !default;
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+.indicator{
+  width: 20px;
+  height: 10px;
+  background-color: #e8650f;
+  display: inline-block;
+  position: absolute;
+  border-radius: 4px;
+  left: -6px;
+  top: 21px;
+}
+.ion-ios-tv {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../app/img/icons/technology.png");
+  background-size: 0.9em;
+}
+.ion-ios-tv-off {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../app/img/icons/television.png");
+  background-size: 0.9em;
+}
+
+.ion-ios-audio{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../app/img/icons/headphones-3.png");
+  background-size: 0.9em;
+}
+.ion-ios-phone{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../app/img/icons/smartphone-1.png");
+  background-size: 0.9em;
+}
+
+.ion-ios-phone-off{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../app/img/icons/smartphone.png");
+  background-size: 0.9em;
+}
+
+.ion-ios-audio-off{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../app/img/icons/headphone.png");
+  background-size: 0.9em;
+}
+.ion-ios-accessories{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../app/img/icons/sunglasses.png");
+  background-size: 0.9em;
+}
+.ion-ios-accessories-off{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../app/img/icons/sunglasses-1.png");
+  background-size: 0.9em;
+}
+.ion-ios-account{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../app/img/icons/boy.png");
+  background-size: 0.9em;
+}
+.ion-ios-account-off{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../app/img/icons/girl.png");
+  background-size: 0.9em;
+}
+.ion-record:before {
+  padding-top: 21px;
+  content: "";
+}
+
+.card, .list-inset {
+  overflow: hidden;
+  margin: 20px 0px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+/*td-cards {
+  display: block;
+  /!* width: 100%; *!/
+  /!* color: #fff; *!/
+  overflow: hidden;
+  margin: 7px 0px;
+  height: 29em;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+td-card {
+  position: absolute;
+  left: 12.2em;
+  right: 1.8em;
+  margin-top: 1em;
+  margin-bottom: 40px;
+  margin-left: -150px;
+
+
+  border: 1px solid #999;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 6px;
+}
+/!*
+td-card.card-0 {
+  -webkit-transform: translate3d(0, 0px, 0);
+  transform: translate3d(0, 0px, 0);
+  top: 0px;
+  z-index: 10;
+}
+td-card.card-1 {
+  -webkit-transform: translate3d(0, 4px, 0);
+  transform: translate3d(0, 4px, 0);
+  z-index: 9;
+}
+td-card.card-2 {
+  -webkit-transform: translate3d(0, 8px, 0);
+  transform: translate3d(0, 8px, 0);
+  z-index: 8;
+}
+*!/
+
+td-card .image {
+  position: relative;
+}
+
+td-card img {
+  max-width: 100%;
+
+  border-radius: 6px;
+}
+
+.yes-text {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 30px;
+  color: rgb(111, 250, 111);
+  opacity: 0;
+}
+.no-text {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: rgb(255, 115, 115);
+  opacity: 0;
+}
+
+.fade {
+  -webkit-transition: 0.2s opacity linear;
+  transition: 0.2s opacity linear;
+  opacity: 0;
+}*/
+
+
+
+.background-grey {
+  background-color: #F7F7F7;
+}
+
+.td-title {
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  text-align: center;
+}
+
+.td-title span {
+  font-weight: bold;
+}
+
+td-cards {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 7px 0px;
+  height: 25em;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+td-card {
+  position: absolute;
+  top: 3em;
+  left: 2em;
+  right: 2em;
+  max-width: 100%;
+  height: 217px;
+  box-shadow: -1px 6px 10px rgba(1, 1, 1, 0.5);
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+td-card img {
+  /*max-width: 100%;
+  border-radius: 4px;*/
+
+  max-width: 100%;
+  height: 217px;
+}
+
+.yes-text {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 30px;
+  color: #4CAF50;
+  opacity: 0;
+}
+
+.no-text {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: #F44336;
+  opacity: 0;
+}
+
+.discard {
+  position: absolute;
+  bottom: 20px;
+  padding: 10px 15px;
+  color: #FFF;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 0 5px 5px 0;
+}
+
+td-card.end-card {
+  background-color: none;
+  box-shadow: none;
+  border-radius: none;
+}
+
+.end-card i {
+  position: absolute;
+  top: calc(50% - 55px);
+  left: calc(50% - 40px);
+  font-size: 100px;
+}
+
+
+.fade {
+  -webkit-transition: 0.2s opacity linear;
+  transition: 0.2s opacity linear;
+  opacity: 0;
+}
+.viewMore{
+  /* bottom: 1px; */
+  text-align: center;
+  /* margin-top: 18em; */
+  padding-top: 12.5em;
+  font-size: 1.5em;
+  color: coral;
+}
+
+
+/*ion-hide-tabs*/
+
+.tabs-top .tab-nav {
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0.6, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0.6, 0.2, 1);
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+  -webkit-transition-property: all;
+  transition-property: all;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.tabs-top .slide-away {
+  transform: translate3d(0, -50px, 0);
+  -webkit-transform: translate3d(0, -50px, 0);
+}
+
+.tabs-bottom .tab-nav,
+.tab-nav {
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  -webkit-transition-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);
+  transition-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);
+  -webkit-transition-property: all;
+  transition-property: all;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.tabs-bottom .slide-away,
+.slide-away {
+  transform: translate3d(0, 49px, 0);
+  -webkit-transform: translate3d(0, 49px, 0);
+}
+
+/*---------------*/
+
+.shareIcon{
+  display: inline-block;
+  position: absolute;
+  right: 1em;
+  top: 2em;
+  a{
+    font-size: .9em;
+  }
+}
+.wishlistIcon{
+  display: inline-block;
+  position: absolute;
+  right: 2em;
+  top: 2.5em;
+  font-size: 5em;
+
+  a{
+    font-size: .9em;
+  }
+}
+
+.nocolpadding{
+  padding:0px !important;
+}
+.nobtnradius{
+  border-radius: 0px !important;
+  border-top: 1em #000000;
+}
+
+

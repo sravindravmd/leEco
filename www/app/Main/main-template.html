@@ -1,0 +1,123 @@
+<ion-view view-title="LeEco">
+  <ion-content style="background-color: #DDD" >
+    <div ng-controller="MainCtrl">
+      <ion-list class="card" >
+        <ion-item>
+          <div><div class="indicator"></div><P>FEATURED ARTICLES</P></div>
+          <ion-slide-box auto-play="true" on-slide-changed="slideHasChanged($index)" does-continue="true" >
+            <ion-slide ng-repeat="image in images" class="padding" ng-click="slidehasbeenClicked($index)">
+              <img ng-src="{{image.url}}" class="full-image"  style="height: 200px">
+            </ion-slide>
+          </ion-slide-box>
+        </ion-item>
+      </ion-list>
+      <!--<td-cards>
+        <td-cards>
+          <td-card ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)" on-partial-swipe="cardPartialSwipe(amt)" class="card-{{$index}}">
+            <div class="image">
+              <div class="no-text">NOPE</div>
+              <img ng-src="{{card.image}}" class="">
+              <div class="yes-text">LIKE</div>
+            </div>
+          </td-card>
+        </td-cards>
+      </td-cards>-->
+
+      <div ng-if="cards.active">
+        <td-cards>
+          <div class="padding"><div class="indicator"></div>&nbsp;<p style="display: inline-block;margin-top: 0.4em;
+    margin-left: 0.2em;">SUPER TVs</p></div>
+          <td-card ng-repeat="card in cards.active" on-destroy="cardDestroyed($index)" on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)" ng-click="selectedTV($index)">
+            <div class="image">
+              <div class="no-text"><i class="icon ion-thumbsdown"></i></div>
+              <div class="yes-text"><i class="icon ion-thumbsup"></i></div>
+              <!-- *************************
+                Discard
+                - The card is removed from the deck and a fly away animation is triggered.
+                - onClickTransitionOut is found in ionic.tdcards.js
+                - Animation can be customized by changing defaults
+              ************************* -->
+              <!-- <div class="discard" ng-click="onClickTransitionOut(card)">DISCARD</div>-->
+              <img ng-src="{{ card.image }}" class="full-image">
+            </div>
+          </td-card>
+          <div class="viewMore">View More</div>
+          <!-- *************************
+            End CardZaZ
+            - 'drag' is set to false. The user cannot drag it.
+            - 'refreshCards()' reloads all cards that have NOT been discarded.
+          ************************* -->
+          <br/>
+          <td-card class="end-card" drag="false">
+            <i class="icon ion-ios-refresh disable-user-behavior" ng-click="refreshCards()"></i>
+          </td-card>
+        </td-cards>
+      </div>
+    </div>
+    <div ng-controller="MainPhonesCtrl">
+      <div ng-if="cards.active">
+        <td-cards>
+          <div class="padding"><div class="indicator"></div>&nbsp;<p style="display: inline-block;margin-top: 0.4em;
+    margin-left: 0.2em;">FUTURE PHONES</p></div>
+          <td-card ng-repeat="card in cards.active" on-destroy="cardDestroyed($index)" on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)" ng-click="selectedTV($index)" ui-sref="product.phoneDetail({phoneId:card.id})">
+            <div class="image">
+              <div class="no-text"><i class="icon ion-thumbsdown"></i></div>
+              <div class="yes-text"><i class="icon ion-thumbsup"></i></div>
+              <!-- *************************
+                Discard
+                - The card is removed from the deck and a fly away animation is triggered.
+                - onClickTransitionOut is found in ionic.tdcards.js
+                - Animation can be customized by changing defaults
+              ************************* -->
+              <!-- <div class="discard" ng-click="onClickTransitionOut(card)">DISCARD</div>-->
+              <img ng-src="{{ card.image }}" class="full-image">
+            </div>
+          </td-card>
+          <div class="viewMore">View More</div>
+          <!-- *************************
+            End Card
+            - 'drag' is set to false. The user cannot drag it.
+            - 'refreshCards()' reloads all cards that have NOT been discarded.
+          ************************* -->
+          <br/>
+          <td-card class="end-card" drag="false">
+            <i class="icon ion-ios-refresh disable-user-behavior" ng-click="refreshCards()"></i>
+          </td-card>
+        </td-cards>
+      </div>
+    </div>
+    <div ng-controller="MainAccessoriesCtrl">
+      <div ng-if="cards.active">
+        <td-cards>
+          <div class="padding"><div class="indicator"></div>&nbsp;<p style="display: inline-block;margin-top: 0.4em;
+    margin-left: 0.2em;">NEW ACCESSORIES</p></div>
+          <td-card ng-repeat="card in cards.active" on-destroy="cardDestroyed($index)" on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)" ng-click="selectedTV($index)">
+            <div class="image">
+              <div class="no-text"><i class="icon ion-thumbsdown"></i></div>
+              <div class="yes-text"><i class="icon ion-thumbsup"></i></div>
+              <!-- *************************
+                Discard
+                - The card is removed from the deck and a fly away animation is triggered.
+                - onClickTransitionOut is found in ionic.tdcards.js
+                - Animation can be customized by changing defaults
+              ************************* -->
+              <!-- <div class="discard" ng-click="onClickTransitionOut(card)">DISCARD</div>-->
+              <img ng-src="{{ card.image }}" class="full-image">
+            </div>
+          </td-card>
+          <div class="viewMore">View More</div>
+          <!-- *************************
+            End Card
+            - 'drag' is set to false. The user cannot drag it.
+            - 'refreshCards()' reloads all cards that have NOT been discarded.
+          ************************* -->
+          <br/>
+          <td-card class="end-card" drag="false">
+            <i class="icon ion-ios-refresh disable-user-behavior" ng-click="refreshCards()"></i>
+          </td-card>
+        </td-cards>
+
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

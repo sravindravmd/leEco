@@ -1,0 +1,31 @@
+<ion-nav-bar class="bar-positive">
+<ion-nav-back-button></ion-nav-back-button>
+  <ion-nav-buttons side="right">
+    <button ng-click="openLeftMenu()" class="button button-small button-clear button-icon icon ion-ios-heart"></button> &nbsp;
+    <button ng-click="openLeftMenu()" class="button button-small button-clear button-icon icon ion-android-notifications"></button>&nbsp;
+    <button ng-click="openLeftMenu()" class="button button-small button-clear button-icon icon ion-ios-cart"></button>&nbsp;
+  </ion-nav-buttons>
+</ion-nav-bar>
+<ion-tabs class="tabs-icon-top tabs-positive tabs-striped">
+  <ion-tab title="Home" icon-on="ion-ios-home" icon-off="ion-ios-home-outline" ui-sref="home.main">
+    <ion-nav-view name="tab-main"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="TV's" icon-on="ion-ios-tv" icon-off="ion-ios-tv-off" ui-sref="home.tvs">
+    <ion-nav-view name="tab-tvs"></ion-nav-view>
+  </ion-tab>
+  <ion-tab title="Phone" icon-on="ion-ios-phone" icon-off="ion-ios-phone-off" ui-sref="home.phone">
+    <ion-nav-view name="tab-phone"></ion-nav-view>
+  </ion-tab>
+  <ion-tab title="Audio" icon-on="ion-ios-audio" icon-off="ion-ios-audio-off" ui-sref="home.audio">
+    <ion-nav-view name="tab-audio"></ion-nav-view>
+  </ion-tab>
+  <ion-tab title="Accessories" icon-on="ion-ios-accessories" icon-off="ion-ios-accessories-off" ui-sref="home.accessories">
+    <ion-nav-view name="tab-accessories"></ion-nav-view>
+  </ion-tab>
+  <ion-tab title="Account" icon-on="ion-ios-account" icon-off="ion-ios-account-off" ui-sref="home.account">
+    <ion-nav-view name="tab-account"></ion-nav-view>
+  </ion-tab>
+</ion-tabs>
+
+
